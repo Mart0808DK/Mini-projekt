@@ -4,8 +4,8 @@ import {useUser} from "../hooks/UseUser.js";
 
 function UserRow ({user}) {
     return (
-       <tr className="text-center">
-           <td>{user.id}</td>
+       <tr className="text-center h-4">
+           <td className="overflow-ellipsis w-8">{user.id.substring(0, 6)}</td>
            <td>{user.name}</td>
            <td>{user.age}</td>
        </tr>

@@ -2,8 +2,10 @@ import {useEffect, useState} from "react";
 
 export function useUser() {
     const [users, setUsers] = useState([])
+
+    const endpoint = "http://localhost:5000/"
     async function getUsers() {
-        const res = await fetch("../../data/user.json")
+        const res = await fetch(endpoint)
         setUsers(await res.json())
     }
 
@@ -12,7 +14,7 @@ export function useUser() {
     }, []);
 
     async function create (user) {
-        await fetch("../../data/user.json", {
+        await fetch(endpoint, {
                 method: "POST",
                 headers: {"content-type": "application/json"},
                 body: JSON.stringify(user)
