@@ -25,7 +25,7 @@ function UserDataPage({users}) {
 
             </thead>
             <tbody>
-            {users.map(user => <UserRow key={user.id} user={user}/>)}
+                {users.map(user => <UserRow key={user.id} user={user}/>)}
             </tbody>
         </table>
         </div>
