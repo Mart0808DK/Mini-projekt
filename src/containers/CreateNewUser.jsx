@@ -1,11 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {useUser} from "../hooks/UseUser.js";
+import React from 'react';
 
 function CreateNewUser({create}) {
     async function handleSubmit(e) {
         e.preventDefault();
-        console.log(e.target.name.value)
-
         const user = {name: e.target.name.value, age: e.target.age.value}
         await create(user)
         e.target.reset();

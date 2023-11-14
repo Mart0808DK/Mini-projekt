@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {useUser} from "../hooks/UseUser.js";
+import React from 'react';
 
 
 function UserRow ({user}) {
     return (
        <tr className="text-center h-4 border border-slate-100">
-           <td className="">{user.id.substring(0, 6)}</td>
+           <td className="p-4">{user.id.substring(0, 6)}</td>
            <td>{user.name}</td>
            <td>{user.age}</td>
        </tr>
@@ -22,7 +21,6 @@ function UserDataPage({users}) {
                 <th>Name</th>
                 <th>Age</th>
             </tr>
-
             </thead>
             <tbody>
                 {users.map(user => <UserRow key={user.id} user={user}/>)}

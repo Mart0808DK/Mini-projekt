@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export function useUser() {
+export function useUsers() {
     const [users, setUsers] = useState([])
 
     const endpoint = "http://localhost:5000/"
@@ -10,7 +10,7 @@ export function useUser() {
     }
 
     useEffect(() => {
-        getUsers()
+        void getUsers()
     }, []);
 
     async function create (user) {
