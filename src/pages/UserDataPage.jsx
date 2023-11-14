@@ -4,8 +4,8 @@ import {useUser} from "../hooks/UseUser.js";
 
 function UserRow ({user}) {
     return (
-       <tr className="text-center h-4">
-           <td className="overflow-ellipsis w-8">{user.id.substring(0, 6)}</td>
+       <tr className="text-center h-4 border border-slate-100">
+           <td className="">{user.id.substring(0, 6)}</td>
            <td>{user.name}</td>
            <td>{user.age}</td>
        </tr>
@@ -14,8 +14,8 @@ function UserRow ({user}) {
 
 function UserDataPage({users}) {
     return (
-        <div className="flex justify-center items-center h-screen ">
-        <table className="border-separate w-80 bg-slate-800">
+        <div className="flex justify-center items-center h-screen">
+        <table className="w-80 bg-slate-800 rounded p-4">
             <thead>
             <tr>
                 <th>Id</th>
